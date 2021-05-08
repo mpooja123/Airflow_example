@@ -1,8 +1,9 @@
 # NOTE: paths are relative to the project root since the build context we specify is the project root
 
-FROM puckel/docker-airflow:1.10.1
+
+RUN pip install apache-airflow-providers-sqlite==1.0.0
 USER root
 
 
 COPY requirements-airflow.txt requirements.txt
-RUN pip3 install -r requirements.txt
+RUN pip install -r requirements.txt
