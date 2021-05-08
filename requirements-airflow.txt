@@ -1,0 +1,5 @@
+apache-airflow[postgres]==1.10.8
+cryptography==2.9.2
+werkzeug==0.16.1
+marshmallow-sqlalchemy==0.17.1
+apache-airflow-providers-sqlite==1.0.0
