@@ -10,13 +10,13 @@ services:
       - "5432:5432"
 
   webserver:
-    image: puckel/docker-airflow:1.10.1
+    image: docker-airflow:1.10.1
     build:
-      context: https://github.com/mpooja123/Airflow_example.git#1.10.1
+      context: https://github.com/mpooja123/Airflow_example.git
       dockerfile: Dockerfile
       args:
         AIRFLOW_DEPS: gcp_api,s3
-        PYTHON_DEPS: sqlalchemy==1.2.0
+        PYTHON_DEPS: sqlalchemy==1.2.0,apache-airflow-providers-sqlite==1.0.0
     restart: always
     depends_on:
       - postgres

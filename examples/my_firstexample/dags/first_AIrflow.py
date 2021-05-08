@@ -1,6 +1,7 @@
 from airflow.models import DAG
 from  airflow.providers.sqlite.operators.sqlite import SqliteOperator
 from datetime import datetime
+import airflow
 
 default_args={
 'start_date':datetime(2021,1,1)
